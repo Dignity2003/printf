@@ -16,7 +16,7 @@ for (i = 0; format[i]; i++)
 {
 if (format[i] != '%')
 {
-putchar(format[i]);
+write(1, &;
 total_char++;
 }
 else
@@ -47,3 +47,12 @@ total_char++;
 va_end(list);
 return (total_char);
 }
+
+/**
+ * _strlen - it prints the length of a string
+ * @str: the string
+ * Return: Always 0
+ */
+int _strlen(char *str)
+{
+int i = 0;
