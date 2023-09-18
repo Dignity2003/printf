@@ -7,41 +7,32 @@
 int _printf(const char *format, ...)
 {
 va_list list;
-char *str;
-int i, j, total_char = 0;
+int a, total_char = 0;
 va_start(list, format);
 if (format == NULL)
 return (-1);
-for (i = 0; format[i]; i++)
+for (a = 0; format[a]; a++)
 {
-if (format[i] != '%')
+if (format[a] != '%')
 {
-putchar(format[i]);
+putchar(format[a]);
 total_char++;
 }
 else
-i++;
-if (format[i] == '\0')
+{
+a++;
+if (format[a] == '\0')
 break;
-if (format[i] == 'c')
+if (format[a] == 'd')
 {
 putchar(va_arg(list, int));
 total_char++;
 }
-if (format[i] == 's')
-{
-str = va_arg(list, char *);
-if (str != NULL)
-for (j = 0; str[j]; j++)
-{
-putchar(str[j]);
-total_char++;
-}
-}
-if (format[i] == '%')
+if (format[a] == 'i')
 {
 putchar(va_arg(list, int));
 total_char++;
+}
 }
 }
 va_end(list);
