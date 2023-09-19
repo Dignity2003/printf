@@ -60,14 +60,14 @@ int __print_reverse(va_list list2, char buff[], int sign, int extent, int precee
 int __print_rot13strings(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
 /*functions for width handler*/
 int __handle_write_char(char c, char buff[], int sign, int extent, int preceed, int sz);
-int __write_number(int is_positive, int index, char buff[], int sign, int extent, int preceed, int sz);
 int __write_num(int index, char buff[], int sign, int extent, int preceed, int len, char pad, char ext_c);
+int __write_number(int is_positive, int index, char buff[], int sign, int extent, int preceed, int sz);
 int __write_pointer(int index, char buff[], int sign, int extent, int preceed, int len, char pad, char ext_c, int pad_start);
 int __write_unsigned(int is_negative, char buff[], int sign, int extent, int preceed, int sz);
 /*utils*/
 int __is_printable(char);
 int __append_hexa_code(char, char[], int);
 int __is_digit(char);
-long int convert_size_number(long int digit, int sz);
-long int convert_size_unsgnd(unsigned long int digit, int sz);
+long int __convert_size_number(long int dig, int sz);
+long int __convert_size_unsigned(unsigned long int dig, int sz);
 #endif /*MAIN.H*/
