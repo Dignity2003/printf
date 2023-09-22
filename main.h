@@ -17,22 +17,22 @@ int _printf(const char *format, ...);
 #define SZ_LONG 2
 #define SZ_SHORT 1
 /**
- * struct fomat - Struct op
+ * struct format - Struct op
  * @fomat: Format
  * @func: Functions associated
  */
-struct fomat
+struct format
 {
-char fomat;
+char format;
 int (*func)(va_list, char[], int, int, int, int);
-} fomat_t;
+} format_t;
 /**
- * typedef struct fomat fomat_t - struct op
- * @fomat: D format
- * @fomat_t: functions associated
+ * typedef struct format format_t - struct op
+ * @format: D format
+ * @format_t: functions associated
  */
-typedef struct fomat fomat_t;
-int handle_print(const char *fomat, int *i, va_list list, char buff[], int sign, int extent, int sz);
+typedef struct format format_t;
+int handle_print(const char *format, int *i, va_list list, char buff[], int sign, int extent, int sz);
 /*functions to writes characters and strings*/
 int __print_char(va_list list, char buff[], int sign, int extent, int preceed, int sz);
 int __print_str(va_list list, char buff[], int sign, int extent, int preceed, int sz);

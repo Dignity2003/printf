@@ -75,4 +75,3 @@ return ((unsigned short) dig);
 }
 return ((unsigned int) dig);
 }
-
