@@ -34,21 +34,21 @@ int (*func)(va_list, char[], int, int, int, int);
 typedef struct format format_t;
 int handle_print(const char *format, int *i, va_list list, char buff[], int sign, int extent, int sz);
 /*functions to writes characters and strings*/
-int __print_char(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_str(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_percent(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
+int __print_char(va_list list, char buff[], int sign, int extent, int preceed, int sz);
+int __print_str(va_list list, char buff[], int sign, int extent, int preceed, int sz);
+int __print_percent(va_list list, char buff[], int sign, int extent, int preceed, int sz);
 /*functions that prints numbers*/
-int __print_int(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_binary(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_octal(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_unsigned(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_hexadecimal(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_hexa(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
-int __print_hexa_upper(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
+int __print_int(va_list list, char buff[], int sign, int extent, int preceed, int sz);
+int __print_binary(va_list list, char buff[], int sign, int extent, int preceed, int sz);
+int __print_octal(va_list list, char buff[], int sign, int extent, int preceed, int sz);
+int __print_unsigned(va_list list, char buff[], int sign, int extent, int preceed, int sz);
+int __print_hexadecimal(va_list list, char buff[], int sign, int extent, int preceed, int sz);
+int __print_hexa(va_list list, char map_to[], char buff[], int sign, char sign_ch, int extent, int preceed, int sz);
+int __print_hexa_upper(va_list list, char buff[], int sign, int extent, int preceed, int sz);
 /*Function that prints non printable charcters*/
-int __print_non_printable(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
+int __print_non_printable(va_list list, char buff[], int sign, int extent, int preceed, int sz);
 /*function that prints memory of address*/
-int __print_pointers(va_list list2, char buff[], int sign, int extent, int preceed, int sz);
+int __print_pointers(va_list list, char buff[], int sign, int extent, int preceed, int sz);
 /*functions for handling other specifiers*/
 int __get_sign(const char *format, int *i);
 int __get_extent(const char *format, int *i, va_list list);

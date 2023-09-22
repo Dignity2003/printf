@@ -63,7 +63,7 @@ return ((int)dig);
  * @sz: It indicates the datatype to change the number to
  * Return: Always 0
  */
-long int __convert_unsigned(unsigned long int dig, int sz)
+long int __convert_size_unsignd(unsigned long int dig, int sz)
 {
 if (sz == SZ_LONG)
 {

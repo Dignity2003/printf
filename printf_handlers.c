@@ -46,7 +46,6 @@ return (write(1, &buff[0], 1));
  * @sz: specifier for size
  * Return: Always 0
  */
-int __write_num(int index, char buff[], int sign, int extent, int preceed, int len, char pad, char ext_c);
 int __write_number(int is_negative, int index, char buff[], int sign, int extent, int preceed, int sz)
 {
 int len = BUFF_SIZE - index - 1;
