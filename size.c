@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * get_size - Calculates the size.
+ * get_size - Calc the size.
  * @format: Formatted string.
- * @i: List of arguments.
+ * @i: arguments.
  * Return: Precision.
  */
 int __get_sz(const char *format, int *i)
@@ -11,9 +11,9 @@ int __get_sz(const char *format, int *i)
 	int size = 0;
 
 	if (format[ptr] == 'l')
-		size = S_LONG;
-	else if (format[curr_i] == 'h')
-		size = S_SHORT;
+		size = SZ_LONG;
+	else if (format[ptr] == 'h')
+		size = SZ_SHORT;
 	if (size == 0)
 		*i = ptr - 1;
 	else

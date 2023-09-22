@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * get_precision - clac the precision
+ * get_precision - perce.
  * @format: Formatted string
- * @i: List of arguments.
- * @list: list of arguments.
+ * @i:arguments.
+ * @list: arguments.
  * Return: Precision.
  */
 int __get_preceed(const char *format, int *i, va_list list)
